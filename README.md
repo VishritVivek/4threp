@@ -10,3 +10,20 @@ try:
 except FileNotFoundError:
     print("YOUR FILE ","sample.txt"," CANNOT BE FOUND")
     print("FILE CONTENT COULD NOT BE FOUND")
+-------------------------------------------------------------
+
+print("WELCOME TO output.txt FILE EDITOR")
+writingori=input("ENTER TEXT TO WRITE TO THE FILE : ")
+print("DATA SUCCESSFULLY WRITTEN IN THE FILE","\n")
+file=open("output.txt","w")
+writing=file.write(writingori+"\n")
+file.close()
+appending1=input("ENTER TEXT TO APPEND TO THE FILE : ")
+print("DATA SUCCESSFULLY APPENDED TO THE FILE","\n")
+file2=open("output.txt","a")
+appending=file2.write(appending1)
+file2.close()
+print("\n","THE FINAL CONTENT OF FILE output.txt IS : ")
+file3=open("output.txt","r")
+reading1=file3.read()
+print(reading1)
